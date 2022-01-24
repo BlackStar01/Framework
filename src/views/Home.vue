@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <notification result="success" message="message"></notification>
+    <notification result="warning" message="La requête a réussi"></notification>
     <grid> Chaud </grid>
   </div>
 </template>
