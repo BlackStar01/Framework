@@ -1,0 +1,23 @@
+/* Colors initalize */
+
+$primary-white: rgb(255, 255, 255);
+$secondary-white: rgb(247, 249, 253);
+$red: #CC3333;
+$green: rgb(9, 133, 81);
+$blue: rgb(0, 82, 255);
+$orange: rgb(255, 121, 0);
+$border: #DEDFE2;
+
+/* Size initialisation */
+
+$sizes: 35px,
+26px,
+22px,
+18px,
+15px,
+13px;
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: nth($sizes, $i);
+    }
+}
