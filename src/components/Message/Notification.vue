@@ -1,5 +1,5 @@
 <template>
-  <div id="notification" :class="result">
+  <div class="notification" :class="result">
       <box-icon :name='iconName' type='solid' :color='iconBg' class="icon"></box-icon>
       <small> {{message}} </small>
   </div>
@@ -48,7 +48,7 @@ module.exports = {
 <style lang="scss" scoped>
 @import "../../../public/_theme.scss";
 
-#notification {
+.notification {
     position: relative;
     width: 100%;
     border-radius: 5px;
@@ -56,13 +56,13 @@ module.exports = {
     padding: 15px;
 }
 
-#notification[class="success"] {
+.success {
     border: 1px solid $green;
 }
-#notification[class="error"] {
+.error {
     border: 1px solid $red;
 }
-#notification[class="warning"] {
+.warning {
     border: 1px solid $orange;
 }
 .success {
