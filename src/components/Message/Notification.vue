@@ -46,7 +46,7 @@ module.exports = {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../public/_theme.scss";
+@import "@/../public/_theme.scss";
 
 .notification {
     position: relative;
@@ -54,6 +54,7 @@ module.exports = {
     border-radius: 5px;
     background-color: #f1f1f1;
     padding: 15px;
+    height: 52px;
 }
 
 .success {
