@@ -3,13 +3,12 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <notification result="warning" message="La requête a réussi"></notification>
 
-    <grid desk="1 1" tablet="1" phone="1">
+    <grid desk="1 1 1" tablet="1" phone="1">
       <notification result="warning" message="La requête a réussi"></notification>
-      <p>ehjt</p>
-      <p>rzf</p>
-      <notification result="warning" message="La requête a réussi"></notification>
-      <p>ehjt</p>
+      <p>CHQUD ....</p>
+       <notification result="warning" message="La requête a réussi"></notification>
     </grid>
+
     <button @click="checkNumber"> Check </button>
     
   </div>

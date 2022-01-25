@@ -8,7 +8,6 @@
 <template>
   <div class="grid" :desktop="desk" :tablet="tablet" :phone="phone">
     <slot></slot>
-    
   </div>
 </template>
   
