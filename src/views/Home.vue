@@ -10,7 +10,9 @@
       ></notification>
       <p>CHQUD ....</p>
       <notification result="error" message="La requête a réussi"></notification>
+      
     </grid>
+    <buttonn design="solid red"> Soumettre </buttonn>
 
   </div>
 </template>
@@ -20,6 +22,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import Notification from "@/components/Message/Notification.vue";
 import Grid from "@/components/Container/Grid.vue";
+import Buttonn from '@/components/Buttons/Button.vue';
 
 export default {
   name: "Home",
@@ -27,6 +30,7 @@ export default {
     HelloWorld,
     Notification,
     Grid,
+    Buttonn
   },
   data() {
     return {};

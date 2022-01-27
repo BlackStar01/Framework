@@ -17,7 +17,7 @@ $sizes: 35px,
 15px,
 13px;
 @for $i from 1 through 6 {
-    h#{$i} {
+    /* h#{$i} {
         font-size: nth($sizes, $i);
-    }
+    } */
 }
