@@ -35,10 +35,8 @@ export default {
       green: "rgb(9, 133, 81)",
       blue: "rgb(0, 82, 255)",
       orange: "rgb(255, 121, 0)",
-      currentColor: "",
     };
   },
-
   computed: {
     checkColor() {
         let color = "";

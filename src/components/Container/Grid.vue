@@ -1,10 +1,4 @@
-/*
-    desk-----tablet-----phone
 
-    Desktop: > 1008px
-    Tablets: 641px to 1007px
-    Phone: moins de 640px
-*/
 <template>
   <div class="grid" :desktop="desk" :tablet="tablet" :phone="phone">
     <slot></slot>

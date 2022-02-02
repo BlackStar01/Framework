@@ -13,7 +13,7 @@
       
     </grid>
     <buttonn design="solid red"> Soumettre </buttonn>
-
+    <toggle design="red"> Veux-tu être informé des bails ?</toggle>
   </div>
 </template>
 
@@ -23,6 +23,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import Notification from "@/components/Message/Notification.vue";
 import Grid from "@/components/Container/Grid.vue";
 import Buttonn from '@/components/Buttons/Button.vue';
+import Toggle from '@/components/Buttons/Toggle.vue';
 
 export default {
   name: "Home",
@@ -30,7 +31,8 @@ export default {
     HelloWorld,
     Notification,
     Grid,
-    Buttonn
+    Buttonn, 
+    Toggle
   },
   data() {
     return {};

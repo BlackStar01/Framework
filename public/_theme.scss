@@ -1,3 +1,14 @@
+/*
+    BREAKPOINTS
+    
+    desk-----tablet-----phone
+    
+    Desktop: > 1008px
+    Tablets: 641px to 1007px
+    Phone: moins de 640px
+*/
+
+
 /* Colors initalize */
 
 $primary-white: rgb(255, 255, 255);
@@ -8,16 +19,16 @@ $blue: rgb(0, 82, 255);
 $orange: rgb(255, 121, 0);
 $border: #DEDFE2;
 
-/* Size initialisation */
+/* Size initialisation for laptop */
 
-$sizes: 35px,
-26px,
-22px,
-18px,
-15px,
-13px;
-@for $i from 1 through 6 {
-    /* h#{$i} {
+@media screen and (min-width: 1008px) {
+    $sizes: 35px, 26px, 22px, 18px, 15px, 13px;
+    @for $i from 1 through 6 {
+        /* h#{$i} {
         font-size: nth($sizes, $i);
     } */
+    }
 }
+
+
+/* Size initialisation for Phone users */
