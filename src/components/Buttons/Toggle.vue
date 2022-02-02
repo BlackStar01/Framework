@@ -1,10 +1,13 @@
 /*
+	Main problem from the CSS.. cannot have many toggle in the same view
+
+
     COLOR: Red, Blue, Green, Orange
     TYPE: Rounded or not... Carré by default .... Carré means no border-radius // Not already made
 	It can take an content for a message
 */
 <template>
-  <div class="toggle" :class="design">
+  <div class="toggle" :class="design" :type="type">
     <input type="checkbox" id="switch" />
     <label for="switch"></label>
     <p><slot></slot></p>
@@ -16,6 +19,7 @@ export default {
   name: "toggle",
   props: {
     design: String,
+	type: String
   },
   data() {
     return {
@@ -23,35 +27,32 @@ export default {
       green: "rgb(9, 133, 81)",
       blue: "rgb(0, 82, 255)",
       orange: "rgb(255, 121, 0)",
+      radius: 90,
     };
   },
   computed: {
     checkColor() {
-        let color = "";
-        if(this.design.search("red") !== -1 )
-        {
-            color = this.red;
-            return color
-        } else if(this.design.search("green") !== -1 )
-        {
-            color = this.green;
-            return color
-        } else if(this.design.search("blue") !== -1 )
-        {
-            color = this.blue;
-            return color
-        } else if(this.design.search("orange") !== -1 )
-        {
-            color = this.orange;
-            return color
-        } 
+      let color = "";
+      if (this.design.search("red") !== -1) {
+        color = this.red;
         return color;
+      } else if (this.design.search("green") !== -1) {
+        color = this.green;
+        return color;
+      } else if (this.design.search("blue") !== -1) {
+        color = this.blue;
+        return color;
+      } else if (this.design.search("orange") !== -1) {
+        color = this.orange;
+        return color;
+      }
+      return color;
     },
-    /* checkBg() {
-        if(this.design.search("solid") === 0)
-            return this.checkColor()
-        return this.checkColor()
-    } */
+    checkType() {
+        if(this.type === "rounded")
+            return this.radius+"px"
+        return "0px"
+    }
   },
 };
 </script>
@@ -71,19 +72,19 @@ label {
   height: 24px;
   background: grey;
   display: block;
-  border-radius: 100px;
+  border-radius: v-bind(checkType);
   position: relative;
 }
 
 label:after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 5px;
   width: 15px;
   height: 15px;
   background: #fff;
-  border-radius: 90px;
+  border-radius: v-bind(checkType);
   transition: 0.3s;
 }
 
@@ -99,5 +100,4 @@ input:checked + label:after {
 label:active:after {
   width: 30px;
 }
-
 </style>

@@ -8,12 +8,18 @@
         result="warning"
         message="La requête a réussi"
       ></notification>
-      <p>CHQUD ....</p>
+      <toggle design="red" type="rounded"> Veux-tu être informé des bails ?</toggle>
       <notification result="error" message="La requête a réussi"></notification>
       
     </grid>
-    <buttonn design="solid red"> Soumettre </buttonn>
-    <toggle design="red"> Veux-tu être informé des bails ?</toggle>
+    <br><br><br><br>
+    <grid desk="1 1 1" tablet="2" phone="1 1" class="aa">
+      <buttonn design="solid red"> Soumettre </buttonn>
+      <toggle design="green" type="rounded"> Veux-tu être informé des bails ?</toggle>
+    </grid>
+    
+    
+    
   </div>
 </template>
 

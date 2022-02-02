@@ -41,21 +41,25 @@ export default {
     },
     onResize() {
       this.width = window.innerWidth;
-    
-      window.document.getElementsByClassName("grid")[0].style.display = "grid";
+      for (let index = 0; index < window.document.getElementsByClassName("grid").length; index++) {
+        window.document.getElementsByClassName("grid")[index].style.display = "grid";
       if (this.width < 640) {
-        window.document.getElementsByClassName("grid")[0].style.gridTemplateColumns =
+        window.document.getElementsByClassName("grid")[index].style.gridTemplateColumns =
           this.nbrCol(this.phone);
       }
       if (this.width > 641 && this.width < 1007) {
-        window.document.getElementsByClassName("grid")[0].style.gridTemplateColumns =
+        window.document.getElementsByClassName("grid")[index].style.gridTemplateColumns =
           this.nbrCol(this.tablet);
       }
       if (this.width > 1008) {
         /* console.log(this.nbrCol(this.desk)); */
-        window.document.getElementsByClassName("grid")[0].style.gridTemplateColumns =
+        window.document.getElementsByClassName("grid")[index].style.gridTemplateColumns =
           this.nbrCol(this.desk);
       }
+        
+      }
+    
+      
     },
   },
 };
